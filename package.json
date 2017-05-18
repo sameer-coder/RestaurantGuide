@@ -1,5 +1,5 @@
 {
-  "name": "Restaurant Guide",
+  "name": "RestaurantGuide",
   "version": "1.0.0",
   "description": "Restaurant Guide Nodejs API",
   "main": "main.js",

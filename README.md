@@ -14,6 +14,7 @@ npm - v3.10.10
 1. Clone the repo from Github
 2. Run command 'cd restaurantguide'
 3. Run npm install && npm start
+4. Application is served on http://localhost:8080/app/
 
 The API can be accessed on port 8080.
 
