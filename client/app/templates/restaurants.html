@@ -1,0 +1,47 @@
+<div class="row" <a href="index.html" class="logo-brand">
+    <img src="assets/img/restaurant/logo-white.png" alt="" style="margin-left:40%" />
+    </a>
+</div>
+
+<section id="reservation" style="background-color: white; margin-left: 50px; margin-right: 50px;margin-top: 20px;">
+
+
+    <div class="row" style="background-color: white">
+        <div class="col-md-4">
+            <div class="input-field">
+                <input type="text" name="location" class="validate" id="location" ng-model="location">
+                <label for="location">Enter Location</label>
+            </div>
+        </div>
+
+
+        <div class="text-center">
+            <button type="submit" name="submit" class="waves-effect waves-light btn btn-lg text-medium mt-30 pull-right" style="margin-right: 70px;"
+                ng-click="searchRestaurants()">Search</button>
+        </div>
+    </div>
+
+    <div class="row" style="background-color: white">
+        <table st-table="rowCollection" class="table col-md-4" style="width:auto">
+            <tbody class="col-md-10">
+                <tr ng-repeat="row in rowCollection">
+                    <td ng-click="showReviews(row)">{{row.restName}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="col-md-6">
+            <div class="row" ng-if="showReviewBox">
+                <label class="col-md-2" style="font-size: 20px;">Write review </label>
+                <input class="col-md-6" style="height:50px;" id="reviewText"></input>
+                <button style="margin-left: 10px;" ng-click="submitReview()" class="waves-effect waves-light btn btn-md text-medium">Submit</button>
+            </div>
+
+            <table st-table="reviewCollection" class="table col-md-6" style="width:auto">
+                <tbody class="col-md-12">
+                    <tr ng-repeat="review in reviewCollection">
+                        <td>{{review}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+</section>
